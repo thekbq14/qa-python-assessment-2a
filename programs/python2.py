@@ -51,10 +51,10 @@ def one(string):
 def two(num):
     if num > 1:
         for i in range (2, num):
-            if (num % i) == 0:
+            if num % i == 0:
                 return False
-            else:
-                return True
+        else:
+            return True
 
     # <QUESTION 3>
 
@@ -123,7 +123,12 @@ def four(string1, string2):
     # The random module contains a function called randint.
 
 def five():
-    return []
+    import random
+    randomlist = []
+    for i in range (0,5,2):
+     n = random.randint(100, 200)
+    randomlist.append(n)
+    return randomlist
 
     # <QUESTION 6>
 
@@ -215,7 +220,10 @@ def eight(string, num):
     # There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+    for char in string1:
+        return True
+
+
 
     # <QUESTION 10>
 
