@@ -125,9 +125,10 @@ def four(string1, string2):
 def five():
     import random
     randomlist = []
-    for i in range (0,5,2):
-     n = random.randint(100, 200)
-    randomlist.append(n)
+    for i in range (0,5):
+     i = random.randint(100, 200)
+     if i % 2 == 0:
+      randomlist.append(i)
     return randomlist
 
     # <QUESTION 6>
@@ -203,7 +204,10 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    return ""
+    middle = len(string) // 2 
+    cut = middle + int(num)
+    newstring = string[:cut] + string[cut+1]
+    return newstring
 
     # <QUESTION 9>
 
