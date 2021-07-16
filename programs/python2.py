@@ -30,7 +30,8 @@
     # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    n = 3
+    return ''.join([char*n for char in string])
 
     # <QUESTION 2>
 
@@ -48,7 +49,11 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    return False
+    for i in range (2, num):
+        if (num % i) == 0:
+            return False
+        else:
+            return True 
 
     # <QUESTION 3>
 
@@ -94,7 +99,8 @@ def three(a):
     # How would you seperate a string into characters?
 
 def four(string1, string2):
-    return ""
+    if len(string1) == len(string2):
+        return ''.join(''.join(x) for x in zip(string1,string2))
 
     # <QUESTION 5>
 
@@ -130,7 +136,16 @@ def five():
     # There are no hints for this question.
     
 def six(string):
-    return False
+    if string.endswith('py'):
+        return True
+    if string.endswith('Py'):
+        return True
+    if string.endswith('pY'):
+        return True
+    if string.endswith('PY'):
+        return True
+    else:
+        return False
 
     # <QUESTION 7>
 
@@ -154,7 +169,12 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
+    if a - b == b - c:
+        return True
+    if a - c == b - a:
+        return True
+    else:
+        return False
 
     # <QUESTION 8>
 
