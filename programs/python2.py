@@ -49,11 +49,12 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    for i in range (2, num):
-        if (num % i) == 0:
-            return False
-        else:
-            return True 
+    if num > 1:
+        for i in range (2, num):
+            if (num % i) == 0:
+                return False
+            else:
+                return True
 
     # <QUESTION 3>
 
@@ -70,7 +71,12 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 1
+    num = int(a)
+    aa = int(num*11)
+    aaa = int(num*111)
+    aaaa = int(num*1111)
+    sum = num + aa + aaa + aaaa
+    return sum
 
     # <QUESTION 4>
 
